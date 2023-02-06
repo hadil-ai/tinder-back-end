@@ -17,7 +17,7 @@ mongoose.connect(connectUrl,{
 })
 const db=mongoose.connection
 // Api endpoints
-app.get("/data",async(req,res)=>{
+app.get("/",async(req,res)=>{
     const Data=await Cards.find()
     res.status(200).send(Data)
 })
