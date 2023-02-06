@@ -6,8 +6,8 @@ import Cards from './dbCards.js'
 dotenv.config()
 //app config
 const app=express()
-const port=process.env.PORT || 9000
-const connectUrl=`mongodb+srv://admin:${process.env.PASSWORD}@cluster0.yde1grw.mongodb.net/database?retryWrites=true&w=majority`
+const port=9000
+const connectUrl=`mongodb+srv://admin:WLAnSd1NpNIW8Pwycluster0.yde1grw.mongodb.net/database?retryWrites=true&w=majority`
 //MiddleWares
 app.use(express.json())
 app.use(cors())
@@ -17,7 +17,7 @@ mongoose.connect(connectUrl,{
 })
 const db=mongoose.connection
 // Api endpoints
-app.get("/",async(req,res)=>{
+app.get("/data",async(req,res)=>{
     const Data=await Cards.find()
     res.status(200).send(Data)
 })
