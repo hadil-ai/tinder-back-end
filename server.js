@@ -18,8 +18,7 @@ mongoose.connect(connectUrl,{
 const db=mongoose.connection
 // Api endpoints
 app.get("/",async(req,res)=>{
-    const Data=await Cards.find()
-    res.status(200).send(Data)
+    res.send("yo")
 })
 //Listeners
 app.listen(port,()=>{console.log(`listening on port : ${port} `)})
