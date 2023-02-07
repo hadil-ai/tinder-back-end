@@ -1,6 +1,6 @@
 const express=require('express');
 const mongoose=require("mongoose")
-dotenv.config()
+const cors=require("cors")
 //app config
 const app=express()
 const port=9000
