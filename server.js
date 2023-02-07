@@ -1,8 +1,5 @@
-import express from "express"
-import mongoose from "mongoose"
-import dotenv from "dotenv"
-import cors from "cors"
-import Cards from './dbCards.js'
+const express=require('express');
+const mongoose=require("mongoose")
 dotenv.config()
 //app config
 const app=express()
